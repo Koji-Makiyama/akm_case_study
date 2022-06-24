@@ -1,0 +1,157 @@
+body {
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Tangerine', serif;
+    background-color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: black;
+}
+
+th {
+	border: 1px solid white;
+	padding: 16px;
+	width: 410px;
+	height: 100px;
+}
+
+tr {
+  background-color: #00ffff;
+}
+
+#side1 {
+	background-color: blue;
+}
+
+#entree1 {
+	background-color: red;	
+}
+
+#dessert1 {
+	background-color: green;
+}
+
+#sbtn0, #sbtn1, #sbtn2, #sbtn3, #sbtn4 {
+  background-color: blue; 
+  color: white; 
+  border-radius: 50px; 
+  border-color: white; 
+  margin-left: 5px	
+} 
+
+#ebtn0, #ebtn1, #ebtn2, #ebtn3, #ebtn4, #ebtn5 {
+  background-color: red; 
+  color: white; 
+  border-radius: 50px; 
+  border-color: white; 
+  margin-left: 5px	
+} 
+
+#dbtn0, #dbtn1, #dbtn2, #dbtn3, #dbtn4 {
+  background-color: green; 
+  color: white; 
+  border-radius: 50px; 
+  border-color: white; 
+  margin-left: 5px	
+} 
+
+
+#sremove, #eremove, #dremove {
+  background-color: orange; 
+  color: white; 
+  border-radius: 50px; 
+  border-color: white; 
+  margin-left: 5px
+}
+
+#click-save {
+  margin: auto;
+}
+
+#add {
+	text-align: center;
+}
+
+#hidden-bullet-list {
+	list-style-type: none;
+	text-align: center;
+}
+
+#top-nav {
+	background-color: orange;
+}
+
+#custom-meal-line {
+  font-family: arial, sans-serif;
+  text-align: center;
+  border: 4px dotted #00ffff;
+  padding: 5px;
+  background-color: black; 
+  color: white;
+  
+}
+
+#contains-add-items {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#restaurant {
+    background-color: rgb(87, 89, 238);
+    color: white;
+}
+
+#entree {
+    background-color: red;
+    color: white;
+}
+
+#side {
+    background-color: orange;
+    color: grey;
+}
+
+#dessert {
+    background-color: brown;
+    color: white;
+
+}
+
+#food-items {
+	color: orange; 
+}
+
+.tab {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.img_position {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.plan {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
