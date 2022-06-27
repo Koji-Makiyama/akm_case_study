@@ -29,7 +29,7 @@ btn1.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Roadslide Sliders';                         // set inner-text of table data to the food name
+    th.innerText = 'Chang\'s Lettuce Wraps';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 });
 
@@ -38,7 +38,7 @@ btn2.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Chicken Pot Stickers';                         // set inner-text of table data to the food name
+    th.innerText = 'Edamame';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 
 });
@@ -48,7 +48,7 @@ btn3.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Quesadilla';                         // set inner-text of table data to the food name
+    th.innerText = 'Handmade Dumplings';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 
 });
@@ -58,7 +58,7 @@ btn4.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Pretzel Bites With Cheddar Cheese Fondue';                         // set inner-text of table data to the food name
+    th.innerText = 'Pork Egg Rolls';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 
 });
@@ -77,7 +77,7 @@ btn6.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Renee\'s Special';                         // set inner-text of table data to the food name
+    th.innerText = 'Orange Chicken';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -87,7 +87,7 @@ btn7.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Grilled Chicken and Avocado Club';                         // set inner-text of table data to the food name
+    th.innerText = 'Kung Pao Chicken';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -96,7 +96,7 @@ btn8.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Fried Chicken Sandwich';                         // set inner-text of table data to the food name
+    th.innerText = 'Kung Pao Shrimp';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -105,7 +105,7 @@ btn9.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Old Fashioned Burger';                         // set inner-text of table data to the food name
+    th.innerText = 'Fire Braised Short Ribs';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -114,7 +114,7 @@ btn10.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Americana Cheeseburger';                         // set inner-text of table data to the food name
+    th.innerText = 'Beef with Broccoli';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -132,7 +132,7 @@ btn12.addEventListener('click', function(event){
     
     let th = document.querySelector('#dessert1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Original Cheesecake Slice';                         // set inner-text of table data to the food name
+    th.innerText = 'Chang\'s Apple Crunch';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: green"); // styles inner-text
 });
 
@@ -141,7 +141,7 @@ btn13.addEventListener('click', function(event){
     
     let th = document.querySelector('#dessert1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Oreo Dream Extreme Cheesecake Slice';                         // set inner-text of table data to the food name
+    th.innerText = 'The Great Wall of Chocolate';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: green"); // styles inner-text
 });
 
@@ -150,7 +150,7 @@ btn14.addEventListener('click', function(event){
     
     let th = document.querySelector('#dessert1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Very Cherry Ghirardelli Chocolate Cheesecake Slice';                         // set inner-text of table data to the food name
+    th.innerText = 'Banana Spring Rolls';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: green"); // styles inner-text
 });
 
@@ -159,7 +159,7 @@ btn15.addEventListener('click', function(event){
     
     let th = document.querySelector('#dessert1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Reese\'s Peanut Butter Chocolate Cake Cheesecake Slice';                         // set inner-text of table data to the food name
+    th.innerText = 'New York-Style Cheesecake';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: green"); // styles inner-text
 });
 
@@ -187,8 +187,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 });
 });
 
-function testFunction() {
-	console.log("Hi");
+function submitPFChangsMeal() {
 	let side = document.getElementById('side1').innerText;
 	let entree = document.getElementById('entree1').innerText;
 	let dessert = document.getElementById('dessert1').innerText;
@@ -197,5 +196,5 @@ function testFunction() {
 	console.log(dessert);
 	let title = document.getElementById('meal-name').value;
 	console.log(title);
-	window.location.replace("http://localhost:8080/cheesecake_factory/update/" + side + "/" + entree + "/" + dessert + "/" + title);
+	window.location.replace("http://localhost:8080/pf_changs/save/" + side + "/" + entree + "/" + dessert + "/" + title);
 }

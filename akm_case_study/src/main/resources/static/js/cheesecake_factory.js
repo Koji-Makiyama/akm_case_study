@@ -187,8 +187,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 });
 });
 
-function testFunction() {
-	console.log("Hi");
+function submitCheesecakeFactoryMeal() {
 	let side = document.getElementById('side1').innerText;
 	let entree = document.getElementById('entree1').innerText;
 	let dessert = document.getElementById('dessert1').innerText;
@@ -197,5 +196,5 @@ function testFunction() {
 	console.log(dessert);
 	let title = document.getElementById('meal-name').value;
 	console.log(title);
-	window.location.replace("http://localhost:8080/cheesecake_factory/update/" + side + "/" + entree + "/" + dessert + "/" + title);
+	window.location.replace("http://localhost:8080/cheesecake_factory/save/" + side + "/" + entree + "/" + dessert + "/" + title);
 }

@@ -16,7 +16,7 @@
 </head>
 
 <body style="background-color: LightCyan">
-	<nav class="navbar navbar-expand-lg navbar-light rounded" style="background-color: black">
+	<nav class="navbar navbar-expand-lg navbar-light rounded" style="background-color: blue">
         <a class="navbar-brand" th:href="@{/}" style="color: white"><b>Home</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,14 +31,10 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                 <b>Choose a restaurant</b>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: blue">
                   <a class="dropdown-item" th:href="@{/cheesecake_factory}" style="color: white"><b>Cheesecake Factory</b></a>
                   <a class="dropdown-item" th:href="@{/olive_garden}" style="color: white"><b>Olive Garden</b></a> 
-                  <a class="dropdown-item" th:href="@{/red_lobster}" style="color: white"><b>Red Lobster</b></a>
                   <a class="dropdown-item" th:href="@{/pf_changs}" style="color: white"><b>P.F. Chang's</b></a>
-                  <a class="dropdown-item" th:href="@{/texas_roadhouse}" style="color: white"><b>Texas Roadhouse</b></a> 
-                  <a class="dropdown-item" th:href="@{/chilis}" style="color: white"><b>Chili's</b></a>  
-                  <a class="dropdown-item" th:href="@{/buffalo_wild_wings}" style="color: white"><b>Buffalo Wild Wings</b></a>
                 </div>
               </li>
             <li class="nav-item active">
@@ -72,8 +68,8 @@
   
         <tr id="row1">
           <th th:field="*{side1}" id="side1"></th><div id="sidediv1"></div>
-          <th th:field="*{entree1}" id="entree1"></th><div id="sidediv2"></div> <!-- THIS IS ACTUALLY ENTREE1 -->
-          <th th:field="*{dessert1}" id="dessert1"></th><div id="sidediv3"></div> <!-- THIS IS ACTUALLY DESSERT1 -->
+          <th th:field="*{entree1}" id="entree1"></th><div id="sidediv2"></div> 
+          <th th:field="*{dessert1}" id="dessert1"></th><div id="sidediv3"></div>
         </tr>
       </table>
       <br>
@@ -83,7 +79,7 @@
       
       
       <br>
-      <button th:onclick="|testFunction()|" id="custom-meal-line" style="border: 4px dotted purple"><b>Click to save your meal!</b></button>
+      <button th:onclick="|submitCheesecakeFactoryMeal()|" id="custom-meal-line" style="border: 4px"><b>Click to save your meal!</b></button>
       <br> 
   </div>
    
@@ -93,14 +89,11 @@
     <div>
     <p id="custom-meal-line" style="border-color: blue"><b>Add a Side</b></p>
       <ul id="hidden-bullet-list">
-        <!--  <li th:each="foodItem : ${list.get(0).menu}"> -->
-        <!--  <button id="btn1" th:if="${foodItem.foodCategory == 'side'}" th:text="${foodItem.foodName}"></button> -->
         <button id="sbtn0" style="background-color: white; color: black">(No side)</button>
         <button id="sbtn1">Roadslide Sliders</button>
         <button id="sbtn2">Chicken Pot Stickers</button>
         <button id="sbtn3">Quesadilla</button>
         <button id="sbtn4">Pretzel Bites With Cheddar Cheese Fondue</button>
-        <!-- </li>  -->
       </ul>
     </div>
     <br>

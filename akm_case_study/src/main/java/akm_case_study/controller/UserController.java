@@ -5,115 +5,114 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import akm_case_study.model.CreatedMeal;
-import akm_case_study.model.CreatedMealForm;
-import akm_case_study.model.CreatedMealForm2;
-import akm_case_study.model.Restaurant;
+import akm_case_study.model.User;
 import akm_case_study.repository.CreatedMealRepository;
 import akm_case_study.service.CreatedMealService;
-import akm_case_study.service.RestaurantService;
 import akm_case_study.service.UserService;
 
 /*
- *  This controller ... does XYZ
+ * Following the Model-View-Controller best practice, I created a UserController class
+ * here to handle mapping requests from the frontend.
  */
-
 @Controller
 public class UserController {
 
 	@Autowired
 	UserService userService;
-	
-	@Autowired // temporary
-	CreatedMealRepository createdMealRepository; // temporary
-	
-	@Autowired
-	RestaurantService restaurantService;
-	
+
+	@Autowired 
+	CreatedMealService createdMealService;
+
 	@GetMapping("/plan")
-	public String plan() {
+	public String viewCreatedMeals(Model model, Authentication authentication) {
+		User user = userService.findByEmail(authentication.getName());
+		Long id = user.getId();
+		List<CreatedMeal> list = createdMealService.findAllCreatedMealsById(id);
+		System.out.println(list);
+		model.addAttribute("list", list);
 		return "plan";
 	}
 	
+	
+    @GetMapping("/plan/update_name/{name}/{id}")
+    public String updateName(
+            @PathVariable("name") String name,
+            @PathVariable("id") long id,
+            Authentication authentication) {
+    CreatedMeal createdMeal = createdMealService.findById(id);
+    createdMeal.setCreatedMealName(name);
+    createdMealService.save(createdMeal);
+        return "redirect:/plan";
+    }
+    
+    
+    @GetMapping("/plan/update_side/{side}/{id}")
+    public String updateSide(
+            @PathVariable("side") String side,
+            @PathVariable("id") long id,
+            Authentication authentication) {
+    CreatedMeal createdMeal = createdMealService.findById(id);
+    createdMeal.setSide(side);
+    createdMealService.save(createdMeal);
+        return "redirect:/plan";
+    }
+	
+    
+    @GetMapping("/plan/update_entree/{entree}/{id}")
+    public String updateEntree(
+            @PathVariable("entree") String entree,
+            @PathVariable("id") long id,
+            Authentication authentication) {
+    CreatedMeal createdMeal = createdMealService.findById(id);
+    createdMeal.setEntree(entree);
+    createdMealService.save(createdMeal);
+        return "redirect:/plan";
+    }
+	
+    
+    @GetMapping("/plan/update_dessert/{dessert}/{id}")
+    public String updateDessert(
+            @PathVariable("dessert") String dessert,
+            @PathVariable("id") long id,
+            Authentication authentication) {
+    CreatedMeal createdMeal = createdMealService.findById(id);
+    createdMeal.setDessert(dessert);
+    createdMealService.save(createdMeal);
+        return "redirect:/plan";
+    }
+	
+    
+	@GetMapping("/plan/delete/{id}")
+	public String deleteCreatedMeal(@PathVariable("id") long id, Authentication authentication) {
+		createdMealService.delete(id);
+		return "redirect:/plan";
+	}
+
 	@GetMapping("/about_me")
 	public String aboutMe() {
 		return "about_me";
 	}
 	
-	// previous TABLE FROM NAME/ITEM1/ITEM2 / ... 12
-	/*
 	@GetMapping("/cheesecake_factory")
-	public String cheesecakeFactory(Model model) {
-		CreatedMealForm createdMealForm = new CreatedMealForm();
-		model.addAttribute("createdMealForm", createdMealForm);
-		
-		List<Restaurant> list = restaurantService.getAllRestaurants();
-		model.addAttribute("list", list);
-		System.out.println(list);
+	public String cheesecakeFactory() {
 		return "cheesecake_factory";
 	}
-	*/
-	
-	// WORK IN PROGRESS FOR PLAN.HTML
-	@RequestMapping("/plan")
-	public String getCustomMeals(Model model) {
-		List<CreatedMeal> createdMeals = createdMealRepository.findAll();
-		model.addAttribute("createdMeals", createdMeals);
-		System.out.println(createdMeals);
-		return "redirect:/plan";
-	}
-	
-	@GetMapping("/cheesecake_factory")
-	public String cheesecakeFactory(Model model) {
-		CreatedMealForm2 createdMealForm = new CreatedMealForm2();
-		model.addAttribute("createdMealForm", createdMealForm);
-		
-		List<Restaurant> list = restaurantService.getAllRestaurants();
-		model.addAttribute("list", list);
-		System.out.println(list);
-		return "cheesecake_factory";
-	}
-
-	//@PostMapping("/add")
-	//public String cheesecakeAddItem(Model model) {
-	// 
-    //}
 	
 	@GetMapping("/olive_garden")
 	public String oliveGarden() {
 		return "olive_garden";
 	}
-	
-	@GetMapping("/red_lobster")
-	public String redLobster() {
-		return "red_lobster";
-	}
-	
+
 	@GetMapping("/pf_changs")
 	public String pfChangs() {
 		return "pf_changs";
 	}
-	
-	@GetMapping("/texas_roadhouse")
-	public String texasRoadhouse() {
-		return "texas_roadhouse";
-	}
-	
-	@GetMapping("/chilis")
-	public String chilis() {
-		return "chilis";
-	}
-	
-	@GetMapping("/buffalo_wild_wings")
-	public String buffaloWildWings() {
-		return "buffalo_wild_wings";
-	}
-	
+
 }

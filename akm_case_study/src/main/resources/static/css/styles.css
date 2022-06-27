@@ -24,10 +24,12 @@ th {
 	padding: 16px;
 	width: 410px;
 	height: 100px;
+	color: black;
+	font-weight: bold;
 }
 
 tr {
-  background-color: #00ffff;
+  background-color: green;
 }
 
 #side1 {
@@ -95,7 +97,7 @@ tr {
 #custom-meal-line {
   font-family: arial, sans-serif;
   text-align: center;
-  border: 4px dotted #00ffff;
+  border: 4px;
   padding: 5px;
   background-color: black; 
   color: white;

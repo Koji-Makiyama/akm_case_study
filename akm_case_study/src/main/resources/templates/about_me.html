@@ -4,7 +4,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>About Me Page</title>
+<title>View Your Meal Page</title>
 
 <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"rel="stylesheet">
 <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/> <!-- KEEP THIS BELOW CDN OR IT WONT OVERRIUDE/CASCADE! -->
@@ -16,7 +16,7 @@
 </head>
 
 <body style="background-color: LightCyan">
-	<nav class="navbar navbar-expand-lg navbar-light rounded" style="background-color: black">
+	<nav class="navbar navbar-expand-lg navbar-light rounded" style="background-color: blue">
         <a class="navbar-brand" th:href="@{/}" style="color: white"><b>Home</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,14 +31,10 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
                 <b>Choose a restaurant</b>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: blue">
                   <a class="dropdown-item" th:href="@{/cheesecake_factory}" style="color: white"><b>Cheesecake Factory</b></a>
                   <a class="dropdown-item" th:href="@{/olive_garden}" style="color: white"><b>Olive Garden</b></a> 
-                  <a class="dropdown-item" th:href="@{/red_lobster}" style="color: white"><b>Red Lobster</b></a>
                   <a class="dropdown-item" th:href="@{/pf_changs}" style="color: white"><b>P.F. Chang's</b></a>
-                  <a class="dropdown-item" th:href="@{/texas_roadhouse}" style="color: white"><b>Texas Roadhouse</b></a> 
-                  <a class="dropdown-item" th:href="@{/chilis}" style="color: white"><b>Chili's</b></a>  
-                  <a class="dropdown-item" th:href="@{/buffalo_wild_wings}" style="color: white"><b>Buffalo Wild Wings</b></a>
                 </div>
               </li>
             <li class="nav-item active">
@@ -57,15 +53,15 @@
 	<br>
 
   <div id="contains-add-items">
-    <h3 style="background-color: pink"><b>About Me Page (under construction)</b></h3>
+    <h3 style="color: white; background-color: black; padding: 10px"><b>About Me</b></h3>
   </div>
   <br>
-<h3 style="text-align: center">Hello, my name is Alexander Koji Makiyama.</h3>
-<h3 style="text-align: center">I am passionate about making technology improve our daily lives!</h3>
-    <br>
-    <br>
-    <br>
+<h3 style="text-align: center">Hi! My name is Alexander Koji Makiyama. I am a passionate software developer and foodie!</h3>
+<br>
+<img src="img/pizza.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 50%">
+<br>
+<br>
+ <h2 id="custom-meal-line" style="background-color: blue">Thank you for stopping by my webpage!</h2>
   
-
 </body>
 </html>

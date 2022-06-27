@@ -38,7 +38,7 @@ btn2.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Dipping Sauces (Includes Breadsticks), marinara/alfredo/five cheese marinara (all Vegetarian)';                         // set inner-text of table data to the food name
+    th.innerText = 'Dipping Sauces (marinara or alfredo)';                         // set inner-text of table data to the food name, used an / symbol here for marinara or alfredo which caused a 404 error
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 
 });
@@ -58,7 +58,7 @@ btn4.addEventListener('click', function(event){
     
     let th = document.querySelector('#side1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Spinach-Arthichoke Dip';                         // set inner-text of table data to the food name
+    th.innerText = 'Spinach-Artichoke Dip';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: blue"); // styles inner-text
 
 });
@@ -96,7 +96,7 @@ btn8.addEventListener('click', function(event){
     
     let th = document.querySelector('#entree1');
     console.log("BEFORE INNERTEXT ASSIGNMENT");
-    th.innerText = 'Tour of Italy';                         // set inner-text of table data to the food name
+    th.innerText = 'Tour Of Italy';                         // set inner-text of table data to the food name
     th.setAttribute("style", "color: white; font-weight: bold; background-color: red"); // styles inner-text
 });
 
@@ -187,8 +187,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 });
 });
 
-function testFunction() {
-	console.log("Hi");
+function submitOliveGardenMeal() {
 	let side = document.getElementById('side1').innerText;
 	let entree = document.getElementById('entree1').innerText;
 	let dessert = document.getElementById('dessert1').innerText;
@@ -197,5 +196,5 @@ function testFunction() {
 	console.log(dessert);
 	let title = document.getElementById('meal-name').value;
 	console.log(title);
-	window.location.replace("http://localhost:8080/cheesecake_factory/update/" + side + "/" + entree + "/" + dessert + "/" + title);
+	window.location.replace("http://localhost:8080/olive_garden/save/" + side + "/" + entree + "/" + dessert + "/" + title);
 }

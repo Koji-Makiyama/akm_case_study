@@ -39,28 +39,33 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authenticationProvider());
     }
 	
+	/*
+	 * This method is extremely important. It handles authorization of users to mappings before authentication (login page only), 
+	 * and after authentication (all webpages). It does this by using various Spring Security methods.
+	 * 
+	 * It is also important to note that Spring handles logout which saves me from having to specify a @GetMapping for "/logout" in
+	 * the LoginController.
+	 * 
+	 * loginPage("/login") tells Spring to use a custom login.html page rather than the default Spring login page.
+	 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers(
 				"/registration**",
 				"/js/**",
 				"/css/**",
-				"/img/**").permitAll() // all your non-authenticated routes
-		.antMatchers("/", "/plan").authenticated().anyRequest().permitAll() // once the user is authenticated, they can go to any route including /test, e.g. if you have admin + user specific, admin will have this, not users
-		// ^ 
-		// user would have .authenticated().permitAll()
-		// admin would have .authenticated().anyRequest().permitAll()
-		// 500 error means you are trying to display something in thymeleaf/pull something from the server that isn't there
+				"/img/**").permitAll() // all the non-authenticated user routes
+		.antMatchers("/", "/plan", "/about_me", "/cheesecake_factory", "/olive_garden", "/pf_changs").authenticated().anyRequest().permitAll() 
 		.and()
 		.formLogin()
-		.loginPage("/login") // tells Spring to use my custom login.html rather than the default Spring login page 
+		.loginPage("/login") 
 		.permitAll() // all visitors can go to login page
 		.and()
 		.logout()
 		.invalidateHttpSession(true)
 		.clearAuthentication(true)
-		.logoutRequestMatcher(new AntPathRequestMatcher("/logout")) // Spring handles logout (saves you from specifying a @GetMapping for "/logout"
-		//.logoutUrl("/logout") requires you to specify a @GetMapping for "/logout"
+		.logoutRequestMatcher(new AntPathRequestMatcher("/logout")) 
+		// if .logoutUrl("/logout") was here, it would require you to specify a @GetMapping for "/logout"
 		.logoutSuccessUrl("/login?logout")
 		.permitAll();
 	}
